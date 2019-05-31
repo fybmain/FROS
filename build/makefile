@@ -1,5 +1,0 @@
-PROJECT_SRC_DIR=..
-PROJECT_BUILD_DIR=.
-
-include $(PROJECT_SRC_DIR)/build.mk
-
