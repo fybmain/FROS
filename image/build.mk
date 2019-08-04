@@ -15,6 +15,7 @@ endef
 image_add_file = $(eval $(call image_add_file_script,$1,$2))
 
 $(call image_add_file,$(LOADER_EFI_PATH),efi/boot/bootx64.efi)
+$(call image_add_file,$(KERNEL_ELF_PATH),fros/kernel.elf)
 
 $(IMAGE_BUILD_DIR):
 	mkdir $@

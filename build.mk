@@ -1,6 +1,6 @@
 MAKEFLAGS += -r -R
 
-COMMON_C_COMPILER = clang
+COMMON_C_COMPILER = clang -c
 COMMON_C_FLAGS =
 COMMON_C_FLAGS += -Wall -Wextra
 COMMON_C_FLAGS += -nostdinc
@@ -31,6 +31,7 @@ endef
 include_subproject = $(eval $(call include_subproject_script,$1,$2))
 
 $(call include_subproject,LOADER,loader)
+$(call include_subproject,KERNEL,kernel)
 $(call include_subproject,IMAGE,image)
 
 .PHONY: default all clean everything
